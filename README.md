@@ -16,5 +16,8 @@ pip install jinja2
 pip install peewee
 pip install peewee_async
 ```
-* 运行  
+* 配置  
+端口：默认为本地环境 `127.0.0.1:8080`
+数据库：默认本机 `127.0.0.1:3306`，可以在conf.py文件中修改数据库账号密码
+* 运行  
 `>>> python main.py`
