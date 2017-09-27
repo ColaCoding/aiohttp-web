@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div id="app">
+        <p>[[ msg ]]</p>
+        <form action="">
+            <input type="text" name="username" placeholder="用户名" v-model="username">
+            <input type="password" name="password" placeholder="密码" v-model="password">
+            <input type="button" name="" id="" value="登录" v-on:click="loginPost">
+        </form>
+    </div>
+
+    <script>
+        var app = new Vue({
+            delimiters: ['[[', ']]'],
+            el: "#app",
+            data: {
+                msg: 'hello vue.js',
+                username: "",
+                password: ""
+            },
+            methods: {
+                loginPost: function () {
+                    $.post('/api_login', {
+                        username: app.username,
+                        password: app.password
+                    }, function (data, status) {
+                        console.log(status);
+                    })
+                }
+            }
+        });
+
+    </script>
+{% endblock %}

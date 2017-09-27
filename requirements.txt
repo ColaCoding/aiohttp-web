@@ -1,0 +1,6 @@
+aiohttp
+aiohttp_jinja2
+aiomysql
+jinja2
+peewee
+peewee_async
